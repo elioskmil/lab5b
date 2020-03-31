@@ -88,8 +88,11 @@ class TransformData():
         the key being the position and the value being the number of players
         with that position
         """
-        
-
+        pos_and_nme = self.names_by_pos()
+        num_of_pos={}
+        for pos in pos_and_nme.keys():
+            num_of_pos[pos] = len(pos_and_nme[pos])
+        return num_of_pos
 
 if __name__ == '__main__':
     TD = TransformData()
