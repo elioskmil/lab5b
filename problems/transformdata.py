@@ -72,12 +72,12 @@ class TransformData():
         Returns a dictionary with the keys are set to the names of the positions
         and the values are set to lists of each name that is that position
         """
-        sort_by_pos={}
+        sort_by_pos = {}
         for nme, pos in zip(self.names, self.positions):
-            if pos in sort_by_pos.keys():
+            if pos in sort_by_pos:
                 sort_by_pos[pos].append(nme)
             else:
-                sort_by_pos[pos]=[nme]
+                sort_by_pos[pos] = [nme]
         return sort_by_pos
 
 
@@ -89,8 +89,8 @@ class TransformData():
         with that position
         """
         pos_and_nme = self.names_by_pos()
-        num_of_pos={}
-        for pos in pos_and_nme.keys():
+        num_of_pos = {}
+        for pos in pos_and_nme:
             num_of_pos[pos] = len(pos_and_nme[pos])
         return num_of_pos
 
