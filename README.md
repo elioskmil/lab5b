@@ -40,3 +40,21 @@ the method
   * if it isn't, it will add `pos` as a key in `sort_by_pos`, and then a list
   containing `nme` as the attached values
 * afterwards, the method will return `sort_by_pos`
+
+###most_played_position()
+```
+def most_played_position(self):
+      """
+      Calls names_by_pos(), and uses the returned dictionary to find the
+      number of players in each position, before returning a dictionary with
+      the key being the position and the value being the number of players
+      with that position
+      """
+```
+* Initializes a dictionary `pos_and_nme` with the value of `self.names_by_pos()`
+* Initializes a dictionary `num_of_pos`
+* uses a `for in` loop to go through each key in `pos_and_nme`, with `pos` as
+  the iterator
+  * adds the key `pos` and sets the value to the length of the list attached to
+    `pos` in `pos_and_nme` to `num_of_pos`
+* Returns `num_of_pos`

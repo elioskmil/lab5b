@@ -80,6 +80,15 @@ class TransformData():
                 sort_by_pos[pos]=[nme]
         return sort_by_pos
 
+
+    def most_played_position(self):
+        """
+        Calls names_by_pos(), and uses the returned dictionary to find the
+        number of players in each position, before returning a dictionary with
+        the key being the position and the value being the number of players
+        with that position
+        """
+            pass
 if __name__ == '__main__':
     TD = TransformData()
     TD.record_per_row()
