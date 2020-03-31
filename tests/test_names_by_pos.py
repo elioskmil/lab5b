@@ -52,12 +52,12 @@ class TestNamesByPos(unittest.TestCase):
             'PF', 'PF', 'SF', 'SG', 'SG', 'PF', 'PG', 'PF', 'PG', 'SG', 'PG',
             'PG', 'PG', 'SG', 'C', 'SG'
         ]
-        actual_result=self.tst.names_by_pos()
+        actual_result = self.tst.names_by_pos()
         expected_result = {
             'PG' : ['Stephen Curry', 'Russell Westbrook', 'Chris Paul',
-            'James Harden', 'Kyle Lowry', 'Mike Conley', 'Jrue Holiday',
-            'Kyrie Irving', 'Zach LaVine', 'John Wall', 'Jeff Teague',
-            'George Hill'],
+            'James Harden', 'Kyle Lowry', 'Mike Conley', 'Damian Lillard',
+            'Jrue Holiday', 'Kyrie Irving', 'Zach LaVine', 'John Wall',
+            'Jeff Teague', 'George Hill'],
             'PF' : ['Blake Griffin', 'Paul Millsap', 'Al Horford',
             'Joel Embiid', 'Anthony Davis', 'Giannis Antetokounmpo',
             'Kevin Love', 'LaMarcus Aldridge', 'Serge Ibaka', 'Aaron Gordon',
@@ -65,6 +65,9 @@ class TestNamesByPos(unittest.TestCase):
             'SF' : ['Gordon Hayward', 'Paul George', 'Kevin Durant',
             'Otto Porter Jr.', 'Andrew Wiggins', 'Chandler Parsons',
             'Harrison Barnes', 'Kawhi Leonard', 'Danilo Gallinari'],
+            'SG' : ['DeMar DeRozan', 'CJ McCollum', 'Bradley Beal',
+            'Nicolas Batum', 'Victor Oladipo', 'Jimmy Butler', 'Tyler Johnson',
+            'Klay Thompson', 'Wesley Matthews'],
             'C' : ['Hassan Whiteside', 'Nikola Jokic', 'Steven Adams',
             'Marc Gasol', 'Rudy Gobert', 'DeAndre Jordan', 'Enes Kanter']
         }
