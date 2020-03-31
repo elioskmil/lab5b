@@ -1,9 +1,11 @@
+
 """
 dataset.py
 Mihaela
 March 11, 2020
 """
 import csv
+
 
 class TransformData():
     """
@@ -53,7 +55,6 @@ class TransformData():
             'PG', 'PG', 'SG', 'C', 'SG'
         ]
 
-
     def record_per_row(self):
         """
         Writes a CSV file with as many records as the size of any of the lists
@@ -61,10 +62,19 @@ class TransformData():
         a name, salary, and position.
         """
         with open('nba.txt', 'w') as nba_file:
-            for n, s, p in zip(self.names, self.salaries, self.positions):
-                nsp_row = n + ',' + str(s) +',' + p + '\n'
+            for nme, slr, pos in zip(self.names, self.salaries, self.positions):
+                nsp_row = nme + ',' + str(slr) + ',' + pos + '\n'
                 nba_file.write(nsp_row)
 
+
+    def names_by_pos(self):
+        """
+        Returns a dictionary with the keys are set to the names of the positions
+        and the values are set to lists of each name that is that position
+        """
+        
+
+
 if __name__ == '__main__':
-    td = TransformData()
-    td.record_per_row()
+    TD = TransformData()
+    TD.record_per_row()
